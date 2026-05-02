@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Moon - Rocket Empire</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="overlay" class="overlay">
+    <h1>The Moon</h1>
+    <p>Launch your rocket, land on the moon, and build an empire under the stars.</p>
+    <button id="launchButton">Launch Rocket</button>
+    <div class="controls">
+      <p>Controls:</p>
+      <p>WASD / arrow keys = move camera</p>
+      <p>Mouse drag = rotate</p>
+      <p>Click buttons after landing to build bases</p>
+    </div>
+  </div>
+  <div id="hud" class="hud hidden">
+    <div class="hud-section">
+      <strong>Stage:</strong> <span id="stageText">Prelaunch</span>
+    </div>
+    <div class="hud-section">
+      <strong>Resources:</strong> <span id="resourcesText">0</span>
+    </div>
+    <div class="hud-section">
+      <strong>Bases:</strong> <span id="basesText">0</span>
+    </div>
+    <div class="build-buttons hidden" id="buildPanel">
+      <button class="build-button" data-type="habitat">Build Habitat (+10)</button>
+      <button class="build-button" data-type="solar">Build Solar Farm (+15)</button>
+      <button class="build-button" data-type="command">Build Command Center (+25)</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
